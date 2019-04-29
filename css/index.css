@@ -32,17 +32,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+meta {
+  display: none;
+}
+
 body {
 	line-height: 1;
 }
-
-@media(max-width: 800px) {
-  //add styles for screen sizes from 500 to 800px:
-  }
-  
-@media(max-width: 500px) {
-  //add styles for screen sizes from 400 to 500px:
-  }
   
 ol, ul {
 	list-style: none;
@@ -50,6 +47,7 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
@@ -91,6 +89,24 @@ header nav {
   margin-top: 35px;
 }
 
+@media screen and (max-width: 500px) {
+  header nav {
+    background-color: white;
+    list-style-type: none;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header nav {
+    background-color: white;
+    list-style-type: none;
+    text-align: center;
+    margin: 10px;
+  }
+}
+
 header nav a {
   margin-right: 65px;
   font-size: 14px;
@@ -110,20 +126,53 @@ header nav a:last-child {
   margin-right: 0;
 }
 
-header .logo {
-  margin-top: 25px;
+@media screen and (max-width: 500px {
+  header .logo {
+    display: none;
+  }
 }
+
+@media screen and (max-width: 800px) {
+  header .logo {
+    margin-top: 25px;
+    align-items: center;
+  }
 
 /* cta */
 
 .cta .cta-text {
-  display: inline-block;
+  display: block;
   vertical-align: top;
   font-size: 77px;
   margin-top: 120px;
   text-align: center;
   padding: 0px 75px;
 }
+
+@media screen and (max-width: 500px) {
+  .cta .cta-text {
+    display: block;
+    position: middle;
+    vertical-align: top;
+    font-size: 77px;
+    margin-top: 120px;
+    text-align: center;
+    padding: 0px 75px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cta .cta-text {
+    display: block;
+    position: middle;
+    vertical-align: top;
+    font-size: 77px;
+    margin-top: 120px;
+    text-align: center;
+    padding: 0px 75px;
+  }
+}
+
 
 .cta .cta-text button {
   background: white;
@@ -135,6 +184,31 @@ header .logo {
   cursor: pointer;
 }
 
+@media screen and (max-width: 500px) {
+  .cta .cta-text button {
+    background: white;
+    margin: 0 auto;
+    margin-top: 6px;
+    font-size: 17px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: block;
+    position: middle;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cta .cta-text button {
+    background: white;
+    margin: 0 auto;
+    margin-top: 6px;
+    font-size: 17px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: block;
+    position: middle;
+  }
+
 .cta .cta-text button:hover {
   background: black;
   color: white;
@@ -143,6 +217,24 @@ header .logo {
 .cta img {
   display: inline-block;
   margin-top: 69px;
+}
+
+@media screen and (max width: 500px) {
+  .cta img {
+    display: block;
+    margin: 0 auto;
+    position: middle;
+    margin-top: 69px;
+  }
+}
+
+@media screen and (max width: 800px) {
+  .cta img {
+    display: block;
+    margin: 0 auto;
+    position: middle;
+    margin-top: 69px;
+  }
 }
 
 .main-content {
@@ -159,6 +251,22 @@ header .logo {
   width: 410px;
   display: inline-block;
   margin-right: 34px;
+}
+
+@media screen and (max width: 500px) {
+  .main-content .top-content .text-content {
+    display: block;
+    margin: 0 auto;
+    position: middle;
+  }
+}
+
+@media screen and (max width: 800px) {
+  .main-content .top-content .text-content {
+    display: block;
+    margin: 0 auto;
+    position: middle;
+  }
 }
 
 .main-content .top-content .text-content:last-child {
@@ -180,6 +288,22 @@ header .logo {
   margin-right: 12px;
 }
 
+@media screen and (max width: 500px) {
+  .main-content .bottom-content .text-content {
+    width: 275px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max width: 800px) {
+  .main-content .bottom-content .text-content {
+    width: 275px;
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
+
 .main-content .bottom-content .text-content:last-child {
   margin-right: 0;
 }
@@ -198,5 +322,24 @@ footer {
   margin: 32px 0;
   text-align: center;
   font-size: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  div.logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header nav {
+    background-color: white;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  div.logo {
+    display: none;
+  }
 }
 
