@@ -1,4 +1,3 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
 
 
 
@@ -32,22 +31,15 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
-meta {
-  display: none;
-}
-
 body {
 	line-height: 1;
 }
-  
 ol, ul {
 	list-style: none;
 }
 blockquote, q {
 	quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
@@ -80,6 +72,24 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto;
 }
 
+@media (max-width: 500px) {
+  .container {
+    width: 450px;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+}
+
 /* header */
 
 header nav {
@@ -89,21 +99,15 @@ header nav {
   margin-top: 35px;
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   header nav {
-    background-color: white;
-    list-style-type: none;
+    width: 75%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  header nav {
-    background-color: white;
-    list-style-type: none;
-    text-align: center;
-    margin: 10px;
   }
 }
 
@@ -112,6 +116,25 @@ header nav a {
   font-size: 14px;
   color: gray;
   text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  header nav a {
+    width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding: 15px;
+  }
+  header nav a:first-child {
+    border-top: 1px solid black;
+  }
 }
 
 header nav a:hover {
@@ -126,53 +149,43 @@ header nav a:last-child {
   margin-right: 0;
 }
 
-@media screen and (max-width: 500px {
-  header .logo {
-    display: none;
-  }
+header .logo {
+  margin-top: 25px;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 500px) {
   header .logo {
-    margin-top: 25px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    vertical-align: top;
   }
+}
 
 /* cta */
 
 .cta .cta-text {
-  display: block;
+  display: inline-block;
   vertical-align: top;
   font-size: 77px;
   margin-top: 120px;
   text-align: center;
-  padding: 0px 75px;
+  padding: auto;
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .cta .cta-text {
-    display: block;
-    position: middle;
-    vertical-align: top;
-    font-size: 77px;
-    margin-top: 120px;
-    text-align: center;
+    width: 420px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
     padding: 0px 75px;
-  }
-}
+  } 
 
-@media screen and (max-width: 800px) {
-  .cta .cta-text {
-    display: block;
-    position: middle;
-    vertical-align: top;
-    font-size: 77px;
-    margin-top: 120px;
-    text-align: center;
-    padding: 0px 75px;
-  }
 }
-
 
 .cta .cta-text button {
   background: white;
@@ -184,30 +197,18 @@ header nav a:last-child {
   cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .cta .cta-text button {
+    width: 420px;
     background: white;
-    margin: 0 auto;
+    vertical-align: top;
     margin-top: 6px;
+    padding: 6px 40px;
     font-size: 17px;
     border: 1px solid black;
     cursor: pointer;
-    display: block;
-    position: middle;
   }
 }
-
-@media screen and (max-width: 800px) {
-  .cta .cta-text button {
-    background: white;
-    margin: 0 auto;
-    margin-top: 6px;
-    font-size: 17px;
-    border: 1px solid black;
-    cursor: pointer;
-    display: block;
-    position: middle;
-  }
 
 .cta .cta-text button:hover {
   background: black;
@@ -219,21 +220,15 @@ header nav a:last-child {
   margin-top: 69px;
 }
 
-@media screen and (max width: 500px) {
+@media (max-width: 500px) {
   .cta img {
-    display: block;
-    margin: 0 auto;
-    position: middle;
-    margin-top: 69px;
+    display: none;
   }
 }
 
-@media screen and (max width: 800px) {
+@media (max-width: 800px) {
   .cta img {
-    display: block;
-    margin: 0 auto;
-    position: middle;
-    margin-top: 69px;
+    display: none;
   }
 }
 
@@ -243,8 +238,23 @@ header nav a:last-child {
   padding-top: 39px;
 }
 
+@media (max-width: 500px) {
+  .main-content {
+    width: 420px;
+    border-top: 2px solid black;
+    margin-top: 70px;
+    padding-top: 35px;
+  }
+}
 .main-content .top-content {
   padding: 0 10px;
+}
+
+@media (max-width: 500px) {
+  .main-content .top-content {
+    width: 420px;
+    padding: 0 5px;
+  }
 }
 
 .main-content .top-content .text-content {
@@ -253,19 +263,12 @@ header nav a:last-child {
   margin-right: 34px;
 }
 
-@media screen and (max width: 500px) {
+@media (max-width: 500px) {
   .main-content .top-content .text-content {
-    display: block;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
-    position: middle;
-  }
-}
-
-@media screen and (max width: 800px) {
-  .main-content .top-content .text-content {
-    display: block;
-    margin: 0 auto;
-    position: middle;
   }
 }
 
@@ -273,8 +276,23 @@ header nav a:last-child {
   margin-right: 0;
 }
 
+@media (max-width: 500px) {
+  .main-content .top-content {
+    width: 420px;
+    padding: 0 5px;
+  }
+}
+
 .main-content .middle-img {
   margin-top: 45px;
+}
+
+@media (max-width: 500px) {
+  .main-content .middle-img {
+    width: 420px;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
 }
 
 .main-content .bottom-content {
@@ -288,19 +306,12 @@ header nav a:last-child {
   margin-right: 12px;
 }
 
-@media screen and (max width: 500px) {
-  .main-content .bottom-content .text-content {
-    width: 275px;
-    display: block;
+@media (max-width: 500px) {
+  .main-content .bottom-content .text-content  {
+    width: 420px;    
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
-  }
-}
-
-@media screen and (max width: 800px) {
-  .main-content .bottom-content .text-content {
-    width: 275px;
-    display: inline-block;
-    margin-right: 12px;
   }
 }
 
@@ -314,8 +325,22 @@ header nav a:last-child {
   padding: 39px 10px 0;
 }
 
+@media (max-width: 500px) {
+  .main-content .top-content {
+    width: 420px;
+    padding: 0 5px;
+  }
+}
+
 .contact p {
   margin: 20px 0;
+}
+
+@media (max-width: 500px) {
+  .contact p {
+    width: 420px;
+    margin: 0 auto;
+  }
 }
 
 footer {
@@ -324,22 +349,11 @@ footer {
   font-size: 14px;
 }
 
-@media screen and (max-width: 800px) {
-  div.logo {
-    display: none;
+@media (max-width: 500px) {
+  footer {
+    width: 420px;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 14px;
   }
 }
-
-@media screen and (max-width: 500px) {
-  .header nav {
-    background-color: white;
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  div.logo {
-    display: none;
-  }
-}
-
