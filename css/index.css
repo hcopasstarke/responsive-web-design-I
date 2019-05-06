@@ -27,9 +27,11 @@ time, mark, audio, video {
   vertical-align: baseline;
   align-content: center;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
+  width: 880px;
 	display: block;
 }
 body {
@@ -67,14 +69,7 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-.container {
-  width: 880px;
-  /* TB LR */
-  margin: 0 auto;
-}
-
 /*header*/
-
 header nav {
   display: flex;
 }
@@ -291,7 +286,7 @@ header.nav ul {
 }
 
 footer {
-  margin: 32px 0;
+  margin: auto;
   text-align: center;
   font-size: 14px;
 }
